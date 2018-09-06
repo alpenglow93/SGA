@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\sga\source\repos\project14_day5_1\main.cpp(30): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+c:\users\sga\source\repos\project14_day5_1\main.cpp(52): error C2084: 'float Mul(float,float)' 함수에 이미 본문이 있습니다.
+  c:\users\sga\source\repos\project14_day5_1\main.cpp(47): note: 'Mul'의 이전 정의를 참조하십시오.

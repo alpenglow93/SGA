@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\sga\source\repos\project14_day8_2\main.cpp(8): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+c:\users\sga\source\repos\project14_day8_2\main.cpp(27): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Project14_day8_2.vcxproj -> C:\Users\SGA\source\repos\Project14_day8_2\Debug\Project14_day8_2.exe

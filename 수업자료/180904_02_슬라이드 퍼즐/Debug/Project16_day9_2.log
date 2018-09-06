@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\sga\source\repos\project16_day9_2\main.cpp(16): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+c:\users\sga\source\repos\project16_day9_2\main.cpp(26): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\sga\source\repos\project16_day9_2\main.cpp(55): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\conio.h(452): note: 'getch' 선언을 참조하십시오.
+  Project16_day9_2.vcxproj -> c:\users\sga\source\repos\Project16_day9_2\Debug\Project16_day9_2.exe

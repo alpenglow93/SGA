@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\sga\source\repos\project16_day9_1\main.cpp(31): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+c:\users\sga\source\repos\project16_day9_1\main.cpp(35): warning C4101: 'pfNum' :참조되지 않은 지역 변수입니다.
+c:\users\sga\source\repos\project16_day9_1\main.cpp(36): warning C4101: 'pBool' :참조되지 않은 지역 변수입니다.
+c:\users\sga\source\repos\project16_day9_1\main.cpp(38): warning C4101: 'pStr' :참조되지 않은 지역 변수입니다.
+  Project16_day9_1.vcxproj -> c:\users\sga\source\repos\Project16_day9_1\Debug\Project16_day9_1.exe
