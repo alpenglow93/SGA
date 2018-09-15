@@ -1,0 +1,6 @@
+﻿  main.cpp
+f:\project\sga\sga\실습\180911_02\main.cpp(36): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+f:\project\sga\sga\실습\180911_02\main.cpp(56): warning C4101: 'Player2' :참조되지 않은 지역 변수입니다.
+f:\project\sga\sga\실습\180911_02\main.cpp(41): warning C4101: 'test' :참조되지 않은 지역 변수입니다.
+f:\project\sga\sga\실습\180911_02\main.cpp(55): warning C4101: 'player1' :참조되지 않은 지역 변수입니다.
+  180911_02.vcxproj -> F:\project\SGA\SGA\실습\180911_02\x64\Debug\180911_02.exe

@@ -1,6 +1,6 @@
 ﻿  Gamenode.cpp
-  MainGame.cpp
   main.cpp
-c:\users\sga\source\1400\180906_01\main.cpp(8): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+f:\project\sga\sga\실습\180906_01\main.cpp(8): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MainGame.cpp
   코드를 생성하고 있습니다...
-  180906_01.vcxproj -> C:\Users\SGA\source\1400\180906_01\Debug\180906_01.exe
+  180906_01.vcxproj -> F:\project\SGA\SGA\실습\180906_01\Debug\180906_01.exe

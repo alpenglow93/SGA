@@ -19,7 +19,7 @@ void main()
 	int bingo[25];	//빙고판
 	int select;		//숫자선택
 
-	int lineCount;	//한 줄 빙고 여부
+	int lineCount = 0;	//한 줄 빙고 여부
 	int bingoCount = 0;
 
 	for (int i = 0; i < 25; i++)
@@ -61,8 +61,8 @@ void main()
 
 		COORD coord = { 4, 9 };
 		SetConsoleCursorPosition(
-			(HANDLE)STD_OUTPUT_HANDLE, coord);
-		if (bingoCount >= 2)
+			GetStdHandle(STD_OUTPUT_HANDLE), coord);
+		if (bingoCount >= 2)	//2빙고시 게임종료
 		{
 			cout << "BINGOCLEAR!!" << endl;
 			break;
@@ -90,7 +90,7 @@ void main()
 		bingoCount = 0;
 		//빙고 계산
 		//가로 빙고
-		for (int i = 0; i < 25; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			lineCount = 0;
 			for (int j = 0; j < 5; j++)
@@ -118,6 +118,7 @@ void main()
 			}
 		}
 		//대각선 왼상-> 오른쪽
+		lineCount = 0;
 		for (int i = 0; i < 5; i++)
 		{
 			for (int j = 0; j < 5; j++)

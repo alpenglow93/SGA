@@ -1,0 +1,11 @@
+﻿  Card.cpp
+  main.cpp
+f:\project\sga\sga\실습\180910_03\player.h(19): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+f:\project\sga\sga\실습\180910_03\main.cpp(4): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MainGame.cpp
+f:\project\sga\sga\실습\180910_03\player.h(19): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+f:\project\sga\sga\실습\180910_03\maingame.cpp(9): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+f:\project\sga\sga\실습\180910_03\player.h(19): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  180910_03.vcxproj -> F:\project\SGA\SGA\실습\180910_03\x64\Debug\180910_03.exe

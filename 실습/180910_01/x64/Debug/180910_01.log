@@ -1,0 +1,10 @@
+﻿  MainGame.cpp
+  main.cpp
+f:\project\sga\sga\실습\180910_01\main.cpp(20): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  코드를 생성하고 있습니다...
+MainGame.obj : error LNK2005: "int Test::a" (?a@Test@@3HA)이(가) main.obj에 이미 정의되어 있습니다.
+MainGame.obj : error LNK2005: "int Test::b" (?b@Test@@3HA)이(가) main.obj에 이미 정의되어 있습니다.
+MainGame.obj : error LNK2005: "int Test::c" (?c@Test@@3HA)이(가) main.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2019: "public: __cdecl MainGame<int>::MainGame<int>(int)" (??0?$MainGame@H@@QEAA@H@Z) 외부 기호(참조 위치: main 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: "public: __cdecl MainGame<int>::~MainGame<int>(void)" (??1?$MainGame@H@@QEAA@XZ) 외부 기호(참조 위치: main 함수)에서 확인하지 못했습니다.
+F:\project\SGA\SGA\실습\180910_01\x64\Debug\180910_01.exe : fatal error LNK1120: 2개의 확인할 수 없는 외부 참조입니다.

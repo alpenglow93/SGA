@@ -1,9 +1,12 @@
 #pragma once
 
+
 namespace Test
 {
 	int a, b, c;
 };
+
+//using namespace Test;
 
 template <typename T>
 class MainGame
