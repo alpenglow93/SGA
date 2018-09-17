@@ -27,8 +27,10 @@ Window::Window()
 	wndClass.hInstance = desc.hInstance;
 	wndClass.lpszClassName = desc.Appname.c_str();
 	wndClass.lpfnWndProc = (WNDPROC)WndProc;
+	wndClass.lpszMenuName = NULL;
 	wndClass.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
 	wndClass.cbSize = sizeof(WNDCLASSEX);
+
 	WORD wHr = RegisterClassEx(&wndClass);
 
 	assert(wHr != 0 && "Not RegisterClass");
@@ -83,6 +85,15 @@ WPARAM Window::Run()
 {
 	MSG msg = { 0 };
 
+	static int x = 100, y = 100;
+
+	HDC hdc = GetDC(desc.Handle);
+	HDC memDC = CreateCompatibleDC(hdc);
+	HBITMAP hBit;
+	hBit = (HBITMAP)CreateCompatibleBitmap(memDC, desc.Width, desc.Height);
+	HBITMAP hOBit = (HBITMAP)SelectObject(memDC, hBit);
+
+	//게임용 메세지 루프
 	while (true)
 	{
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
@@ -98,8 +109,36 @@ WPARAM Window::Run()
 			//게임동작
 			//Update();
 			//Render();
+
+			//키입력
+			if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+			{
+				x -= 1;
+				//InvalidateRect(desc.Handle, NULL, true);
+			}
+			if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+			{
+				x += 1;
+				//InvalidateRect(desc.Handle, NULL, true);
+
+			}
+
+			//랜더
+			//백버퍼의 내용을 흰색으로
+			PatBlt(memDC, 0, 0, desc.Width, desc.Height, WHITENESS);
+			//백버퍼에 내용을 그린다
+			Rectangle(memDC, x, y, x + 100, y + 100);
+			//백버퍼의 내용을 전방버퍼로 보낸다
+			BitBlt(hdc, 0, 0, desc.Width, desc.Height, memDC, 0, 0, SRCCOPY);
+
+			//HDC hdc = GetDC(desc.Handle);
+			//Rectangle(hdc, x, y, x + 100, y + 100);
+			//ReleaseDC(desc.Handle, hdc);
 		}
 	}
+
+	ReleaseDC(desc.Handle, memDC);
+	ReleaseDC(desc.Handle, hdc);
 	
 	return msg.wParam;
 }

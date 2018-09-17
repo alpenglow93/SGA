@@ -3,11 +3,12 @@
 #include <Windows.h>
 #include <assert.h>
 #include <stdio.h>
-#include <string>
 #include <vector>
 #include <map>
 
 using namespace std;
+
+#include "DirectX/Include/D3DX10math.h"
 
 struct _D2DDesc
 {
