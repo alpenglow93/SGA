@@ -85,13 +85,15 @@ WPARAM Window::Run()
 {
 	MSG msg = { 0 };
 
-	static int x = 100, y = 100;
+	//static int x = 100, y = 100;
 
-	HDC hdc = GetDC(desc.Handle);
-	HDC memDC = CreateCompatibleDC(hdc);
-	HBITMAP hBit;
-	hBit = (HBITMAP)CreateCompatibleBitmap(memDC, desc.Width, desc.Height);
-	HBITMAP hOBit = (HBITMAP)SelectObject(memDC, hBit);
+	//HDC hdc = GetDC(desc.Handle);
+	//HDC memDC = CreateCompatibleDC(hdc);
+	//HBITMAP hBit;
+	//hBit = (HBITMAP)CreateCompatibleBitmap(memDC, desc.Width, desc.Height);
+	//HBITMAP hOBit = (HBITMAP)SelectObject(memDC, hBit);
+
+	d2d = new D2D;
 
 	//게임용 메세지 루프
 	while (true)
@@ -110,35 +112,41 @@ WPARAM Window::Run()
 			//Update();
 			//Render();
 
-			//키입력
-			if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+			////키입력
+			//if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+			//{
+			//	x -= 1;
+			//	//InvalidateRect(desc.Handle, NULL, true);
+			//}
+			//if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+			//{
+			//	x += 1;
+			//	//InvalidateRect(desc.Handle, NULL, true);
+
+			//}
+
+			////랜더
+			////백버퍼의 내용을 흰색으로
+			//PatBlt(memDC, 0, 0, desc.Width, desc.Height, WHITENESS);
+			////백버퍼에 내용을 그린다
+			//Rectangle(memDC, x, y, x + 100, y + 100);
+			////백버퍼의 내용을 전방버퍼로 보낸다
+			//BitBlt(hdc, 0, 0, desc.Width, desc.Height, memDC, 0, 0, SRCCOPY);
+
+			////HDC hdc = GetDC(desc.Handle);
+			////Rectangle(hdc, x, y, x + 100, y + 100);
+			////ReleaseDC(desc.Handle, hdc);
+
+			d2d->Clear(D3DXCOLOR(1.0f, 0.0f, 0.0f, 1.0f));
 			{
-				x -= 1;
-				//InvalidateRect(desc.Handle, NULL, true);
-			}
-			if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-			{
-				x += 1;
-				//InvalidateRect(desc.Handle, NULL, true);
 
 			}
-
-			//랜더
-			//백버퍼의 내용을 흰색으로
-			PatBlt(memDC, 0, 0, desc.Width, desc.Height, WHITENESS);
-			//백버퍼에 내용을 그린다
-			Rectangle(memDC, x, y, x + 100, y + 100);
-			//백버퍼의 내용을 전방버퍼로 보낸다
-			BitBlt(hdc, 0, 0, desc.Width, desc.Height, memDC, 0, 0, SRCCOPY);
-
-			//HDC hdc = GetDC(desc.Handle);
-			//Rectangle(hdc, x, y, x + 100, y + 100);
-			//ReleaseDC(desc.Handle, hdc);
+			d2d->Present();
 		}
 	}
 
-	ReleaseDC(desc.Handle, memDC);
-	ReleaseDC(desc.Handle, hdc);
+	//ReleaseDC(desc.Handle, memDC);
+	//ReleaseDC(desc.Handle, hdc);
 	
 	return msg.wParam;
 }
