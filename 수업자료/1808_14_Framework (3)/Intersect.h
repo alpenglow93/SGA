@@ -1,0 +1,15 @@
+#pragma once
+#include "Rect.h"
+class Intersect
+{
+public:
+	Intersect();
+	~Intersect();
+
+	//return : 결과값
+	//temp : 겹쳐진 부분
+	//comp1 : 사각형 1
+	//comp2 : 사각형 2
+	static bool IsConstainRect(Rect* temp, Rect* comp1, Rect* comp2);
+};
+
